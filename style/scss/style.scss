@@ -1,0 +1,44 @@
+// Usefull @media breakpoints:
+
+// Extra Small Screens (Mobile)
+$max-xsmall: 319.98px;
+$min-xsmall: 320px;
+
+// Small Screens (Mobile)
+$max-small: 575.98px;
+$min-small: 576px;
+
+// Medium Screens (Tablets)
+$max-medium: 767.98px;
+$min-medium: 768px;
+
+// Large Screens  (13" Laptops)
+$max-large: 991.98px;
+$min-large: 992px;
+
+// Extra Large Screens (15" Laptops +)
+$max-xlarge: 1199.98px;
+$min-xlarge: 1200px;
+
+// Ultra Large Screens (24" Screens +)
+$max-xxlarge: 1799.98px;
+$min-xxlarge: 1800px;
+
+// Base CSS
+html, body {
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #D6D6D6;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
