@@ -8,6 +8,7 @@ class PageController extends PageModel
     {
         // Parse the url
         $this->parse_url();
+
         // Load the given page
         $this->load_page();
     }
@@ -30,17 +31,18 @@ class PageController extends PageModel
     {
         // Set the pagename at load
         $page = $this->urlArr['pagename'];
+
         // Set to home if none given
-        if (empty($page)) $page = 'project_list';
+        if (empty($page)) $page = 'alle_projecten';
 
         // Load the needed PHP class that corresponds with the page
         $objName = ucfirst(strtolower($page)) . 'Page';
         if (class_exists($objName)) $this->pageObj = new $objName($this->urlArr);
         else {
             require_once ERROR_404_PAGE;
-            header("Refresh: 1; url=" . PageController::url('project_list') . "");
+            header("Refresh: 1; url=" . PageController::url('alle_projecten') . "");
             exit();
-        };
+        }
 
         // Get start of HTML and the HEAD
         $this->get_part('header');
@@ -49,7 +51,7 @@ class PageController extends PageModel
         if (file_exists(VIEW . $page . '.phtml')) require VIEW . $page . '.phtml';
         else {
             require_once ERROR_404_PAGE;
-            header("Refresh: 1; url=" . PageController::url('project_list') . "");
+            header("Refresh: 1; url=" . PageController::url('alle_projecten') . "");
             exit();
         }
 
@@ -61,11 +63,13 @@ class PageController extends PageModel
     {
         // Make a static variable $baseurl
         static $baseurl;
+
         // Check if http or https, then take the host, root directory and the base directory and return a complete url path
         if (!$baseurl) $baseurl = "http" . (!empty($_SERVER['HTTPS']) ? "s" : "") . "://" . $_SERVER['HTTP_HOST'] . preg_replace('@^' . preg_quote(rtrim(realpath($_SERVER['DOCUMENT_ROOT']), '/')) . '@', '', BASEDIR);
         $url = trim($baseurl, '/') . '/' . ltrim($sub_url, '/');
         if (is_file(rtrim(BASEDIR, '/') . '/' . $sub_url)) $url = self::add_param($url, ['_' => filemtime(rtrim(BASEDIR, '/') . '/' . $sub_url)]);
         else $url = rtrim($url, '/') . '/';
+
         // Return the url
         return $url;
     }
@@ -85,5 +89,20 @@ class PageController extends PageModel
         $file = PARTS . $name . '.phtml';
         if (file_exists($file)) require $file;
         else var_dump($file);
+    }
+
+    public static function get_part_string($name, array $vars = array())
+    {
+        // Get subpages
+        $file = PARTS . $name . '.phtml';
+        if (file_exists($file)) {
+            ob_start();
+            require $file;
+            $return = ob_get_contents();
+        } else {
+            $return = false;
+        }
+        ob_end_clean();
+        return $return;
     }
 }

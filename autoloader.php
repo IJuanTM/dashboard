@@ -17,6 +17,6 @@ spl_autoload_register(function ($className) {
     } else {
         // Load the error 404 page when no page is found
         require_once ERROR_404_PAGE;
-        header("Refresh: 1; url=" . PageController::url('project_list') . "");
+        header("Refresh: 1; url=" . PageController::url('alle_projecten') . "");
     }
 });

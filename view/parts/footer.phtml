@@ -1,7 +1,15 @@
-<div class="footer">
+<div class="footer-large">
     <div class="clock center" id="clock"></div>
-    <div class="logo center">
-        <img class="logo-img" src="../../img/jpg/logo.jpg" alt="logo">
-        <span class="logo-text"><?= ApplicationController::load_svg('logo-text') ?></span>
+    <div class="footer-date">
+        <div class="day" id="day"></div>
+        <div class="date" id="date"></div>
     </div>
+    <a class="logo center" href="https://www.clearsite.nl/" target="_blank">
+        <img class="logo-img" src="../../img/logo.png" alt="logo">
+        <span class="logo-text"><?= ApplicationController::load_svg('logo-text') ?></span>
+    </a>
+</div>
+
+<div class="footer">
+    <a class="footer-copy center" href="https://www.clearsite.nl/" target="_blank">&copy; Clearsite 2020</a>
 </div>

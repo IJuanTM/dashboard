@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="<?= PageController::url('img/favicon/favicon-32x32.png') ?>">
     <link rel="icon" type="image/png" sizes="16x16" href="<?= PageController::url('img/favicon/favicon-16x16.png') ?>">
     <link rel="manifest" href="<?= PageController::url('img/favicon/site.webmanifest') ?>">
-    <link rel="mask-icon" href="<?= PageController::url('img/favicon/safari-pinned-tab.svg') ?>" color="#5bbad5">
+    <link rel="mask-icon" href="<?= PageController::url('img/favicon/safari-pinned-tab.svg') ?>" color="#0265dd">
     <!--For the favicons I recommend using https://realfavicongenerator.net/, this will give you all the icons for every browser.-->
 
     <!--Meta and CSS-->
@@ -27,7 +27,11 @@
     ?>
 </head>
 <body>
+<!-- Loading icon -->
+<div id="load"><span id="load-text">Laden...</span></div>
+
 <!--Navbar-->
 <?php $this->get_part('navbar'); ?>
+
 <!--Content-->
-<section class="content">
+<section class="content" id="content">

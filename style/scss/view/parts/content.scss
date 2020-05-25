@@ -1,4 +1,17 @@
 section.content {
   z-index: 0;
-  min-height: calc(100vh - 10vmin);
+}
+
+// Mobile, Tablet & Laptop -
+@media (max-width: $max-xxlarge) {
+  section.content {
+    min-height: calc(100vh - 5.375rem);
+  }
+}
+
+// Large screens +
+@media (min-width: $min-xxlarge) {
+  section.content {
+    min-height: 90vh;
+  }
 }

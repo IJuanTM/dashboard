@@ -28,3 +28,6 @@ define('ERROR_403_PAGE', ERRORS . '403.phtml');
 define('ERROR_404_PAGE', ERRORS . '404.phtml');
 define('ERROR_500_PAGE', ERRORS . '500.phtml');
 define('ERROR_UNSUPPORTED', ERRORS . 'unsupported.phtml');
+
+// Server information
+define('INFO', 'Server info: ' . apache_get_version());

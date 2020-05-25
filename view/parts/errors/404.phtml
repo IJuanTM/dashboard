@@ -4,16 +4,22 @@
         padding: 0;
         overflow: hidden;
     }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 
-<div style="display: flex; justify-content: center; align-items: center; overflow: hidden; background-color: #000000; height: calc(100vh - 10vmin); padding: 5vmin;">
-    <div style="font-family: monospace; font-weight: 200; text-align: center;">
-        <div style="color: #FF0000; font-size: 4vmin; letter-spacing: 1vmin;">
+<div style="height: 100%; display: flex; align-items: center; justify-content: center; background-color: #D6D6D6;">
+    <div style="text-align: center;">
+        <div style="color: #FF0000; font-size: 4vmin; letter-spacing: .5vmin;">
             <h1>ERROR 404</h1>
         </div>
-        <div style="color: #FFFFFF; font-size: 2vmin;">
-            <h3>This page does not exist!</h3>
-            <h3>You will be redirected to the homepage.</h3>
+        <div>
+            <h3 style="font-size: 3vmin;">This page does not exist!</h3>
+            <h2 style="font-size: 2.5vmin;">You will be redirected to the homepage.</h2>
         </div>
     </div>
 </div>

@@ -1,14 +1,14 @@
 {
   "name": "clearsite-dashboard",
-  "version": "1.0.0",
+  "version": "1.1.4",
   "description": "Dashboard site voor clearsite",
   "main": "index.php",
   "author": "Iwan van der Wal",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.1"
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1"
   },
   "dependencies": {},
   "repository": {
