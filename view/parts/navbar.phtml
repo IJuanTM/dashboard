@@ -1,20 +1,22 @@
 <nav class="navbar">
     <a class="logo center" href="https://www.clearsite.nl/" target="_blank">
-        <img class="logo-img" src="../../img/logo.png" alt="logo">
+        <img class="logo-img" src="../../img/clearsite.png" alt="logo">
         <span class="logo-text"><?= ApplicationController::load_svg('logo-text') ?></span>
     </a>
+    <span class="navbar-fade"></span>
     <button class="hamburger hamburger--squeeze" type="button">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
     </button>
-    <div class="menu" id="menu">
-        <div class="collapse center">
-            <ul class="nav-links">
-                <li id="/laatste_project"><a href="<?= PageController::url('laatste_project') ?>">Laatste Project</a></li>
-                <li id="/alle_projecten"><a href="<?= PageController::url('alle_projecten') ?>">Alle Projecten</a></li>
-                <li id="/over_projecten"><a href="<?= PageController::url('over_projecten') ?>">Over De Projecten</a></li>
-            </ul>
-        </div>
-    </div>
 </nav>
+
+<div class="menu" id="menu">
+    <div class="collapse center">
+        <ul class="nav-links">
+            <li id="/laatste_project"><a href="<?= PageController::url('laatste_project') ?>">Laatste Project</a></li>
+            <li id="/alle_projecten"><a href="<?= PageController::url('alle_projecten') ?>">Alle Projecten</a></li>
+            <li id="/over_projecten"><a href="<?= PageController::url('over_projecten') ?>">Over De Projecten</a></li>
+        </ul>
+    </div>
+</div>

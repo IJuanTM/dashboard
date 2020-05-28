@@ -8,6 +8,18 @@ class ApplicationController extends ApplicationModel
         new PageController();
     }
 
+    public static function load_img($name, $ext)
+    {
+        // An image loader
+        $file = BASEDIR . IMG . $name . $ext;
+        if (file_exists($file)) {
+            return $file;
+        } else {
+            echo $file;
+            exit();
+        }
+    }
+
     public static function load_svg($name)
     {
         // A clever svg loader
@@ -16,7 +28,7 @@ class ApplicationController extends ApplicationModel
             return file_get_contents($file);
         } else {
             echo $file;
-            exit;
+            exit();
         }
     }
 

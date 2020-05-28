@@ -3,7 +3,6 @@
 define('PAGENAME', 'Clearsite Dashboard');
 
 // Set the current date and time constants
-define('TIMEZONE', date_default_timezone_set('Europe/Amsterdam'));
 define('DATE', date('Y-m-d'));
 define('TIME', date('H:i'));
 

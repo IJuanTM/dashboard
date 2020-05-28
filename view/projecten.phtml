@@ -1,28 +1,4 @@
 <?php if (!empty($this->pageObj->Project)) : ?>
-    <div class="project_page-large">
-        <div class="project-row center">
-            <span class="project-chevron chevron-left center">
-                <a href=""><i class="fas fa-4x fa-chevron-left"></i></a>
-            </span>
-            <div class="carousel">
-                <span class="carousel-prev center">
-                    <a href=""><i class="fas fa-2x fa-chevron-left"></i></a>
-                </span>
-                <?= $this->pageObj->Project ?>
-                <span class="carousel-next center">
-                    <a href=""><i class="fas fa-2x fa-chevron-right"></i></a>
-                </span>
-            </div>
-            <span class="project-chevron chevron-right center">
-                <a href=""><i class="fas fa-4x fa-chevron-right"></i></a>
-            </span>
-        </div>
-        <div class="project-details">
-            <div class="project-text"></div>
-            <div class="qr-code"></div>
-        </div>
-    </div>
-
     <div class="project_page">
         <span class="project-chevron chevron-left center">
             <a href="<?= PageController::url($this->pageObj->Prev) ?>"><i class="fas fa-chevron-left"></i></a>

@@ -1,17 +1,21 @@
 section.content {
   z-index: 0;
+  background-color: #D6D6D6;
+  background-image: url($img + "clearsite-bg.png");
+  background-position: 100% 50%;
+  background-size: 50%;
 }
 
 // Mobile, Tablet & Laptop -
 @media (max-width: $max-xxlarge) {
   section.content {
-    min-height: calc(100vh - 5.375rem);
+    height: calc(100vh - 5.375rem);
   }
 }
 
 // Large screens +
 @media (min-width: $min-xxlarge) {
   section.content {
-    min-height: 90vh;
+    height: 90vh;
   }
 }
